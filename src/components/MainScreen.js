@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useGet from '../hooks/useGet';
+import '../components/style.css'
 
 function Mainscreen() {
 
@@ -20,7 +21,7 @@ function Mainscreen() {
         setModalData(resJson.Results);
     }
 
-    // Set Dropdown 
+    // Set Dropdown
     const handleChange = (e) => {
         e.preventDefault();
 
@@ -29,32 +30,44 @@ function Mainscreen() {
     }
 
     return (
-        <div>
+        <div className="maincont">
+            <div className="selectcont">
+                <div className="form_layout">
+                    <form >
+                        <label className="fonts">Select Car Makes: </label>
+                        <select onChange={handleChange}>
 
-            <form>
-                <label>Select Car Makes: </label>
-                <select onChange={handleChange}>
+                            {data.map((name) => {
+                                return (
+                                    <option className="fonts" value={name.Make_Name}>{name.Make_Name}</option>
+                                );
+                            })}
+                        </select>
+                    </form>
 
-                    {data.map((name) => {
-                        return (
-                            <option value={name.Make_Name}>{name.Make_Name}</option>
-                        );
-                    })}
-                </select>
-            </form>
-
-            <button onClick={getAllData}>GetData</button>
-
+                    <button className="button" onClick={getAllData}>Get Models</button>
+                </div>
+            </div>
             <div>
+                {/* {modelData.map((makeName) => {
+                    return (
+                        <div className="model">
+                            <p>{makeName.Make_Name}</p>
+                        </div>
+                    )
+                })} */}
                 {modelData.map((makeName) => {
                     return (
-                        <ul>
-                            <li>
-                                <h3> ID: {makeName.Make_ID}</h3>
-                                <h3> Make Name: {makeName.Make_Name}</h3>
-                                <h3> Model Name: {makeName.Model_Name}</h3>
-                            </li>
-                        </ul>
+                        <div>
+
+                            <ul>
+                                <li className="w3-panel w3-card">
+                                    <h6 > <b>ID:</b> {makeName.Make_ID}</h6>
+                                    <h6> <b>Make Name:</b> {makeName.Make_Name}</h6>
+                                    <h6> <b>Model Name:</b> {makeName.Model_Name}</h6>
+                                </li>
+                            </ul>
+                        </div>
                     );
                 })}
             </div>

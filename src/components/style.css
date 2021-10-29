@@ -1,3 +1,76 @@
-.cont{
-    margin-left: 90px;
+body{
+    background-color: #eec0c6;
+background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+
 }
+.form_layout
+
+{
+
+    display: flex;
+    padding-left: 20px;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+.button {
+    background-color: #008CBA; /* Green */
+    border: none;
+    color: white;
+    margin-left: 5px;
+    padding: 5px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+.selectcont{
+    width: 70%;
+    height: 70px;
+    margin-top: 10px;
+    margin-left: 20rem;
+    border: 1px solid black;
+    display: flex;
+    margin-bottom: 30px;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    align-items: center;
+  
+    
+    
+}
+.fonts{
+    font-size: 18px;
+}
+.w3-panel{
+background-color: white;
+align-items: center;
+list-style: none;
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-evenly;
+
+    align-items: stretch;
+    margin-left: 270px;
+    width: 70%;
+}
+.w3-panel:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .model{
+      margin-left: 10px;
+      font-weight: bold;
+  }
