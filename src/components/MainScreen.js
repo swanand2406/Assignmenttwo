@@ -46,7 +46,9 @@ function Mainscreen() {
                     </form>
 
                     <button className="button" onClick={getAllData}>Get Models</button>
+                    
                 </div>
+                
             </div>
             <div>
                 {/* {modelData.map((makeName) => {
