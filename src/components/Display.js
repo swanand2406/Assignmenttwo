@@ -1,5 +1,6 @@
+//Component for displaying the data in card format
+
 import React, { useState } from 'react';
-import useGet from '../hooks/useGet';
 
 function Display({modelData}){
 

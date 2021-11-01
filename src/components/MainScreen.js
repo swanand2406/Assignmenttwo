@@ -6,7 +6,7 @@ import Display from './Display';
 function Mainscreen() {
 
 
-    const [optionValue, setOptionValue] = useState("ASTON MARTIN");
+    const [optionValue, setOptionValue] = useState("ASTON MARTIN"); //ASTON MARTIN is the bydefault value for getting data
     const [modelData, setModalData] = useState([]);
 
 
