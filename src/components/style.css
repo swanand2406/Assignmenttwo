@@ -1,6 +1,5 @@
 body{
-    background-color: #eec0c6;
-background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+    background-color:#2F86A6
 
 }
 .form_layout
@@ -19,7 +18,7 @@ background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
 
 }
 .button {
-    background-color: #008CBA; /* Green */
+    background-color: #ba1600; 
     border: none;
     color: white;
     margin-left: 5px;
@@ -34,7 +33,7 @@ background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
     height: 4rem;
     margin-top: 10px;
     margin-left: 20rem;
-    border: 1px solid black;
+   
     display: flex;
     margin-bottom: 30px;
 
@@ -50,7 +49,7 @@ background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
     
 }
 .fonts{
-    font-size: 18px;
+    font-size: 14px;
 }
 .w3-panel{
 background-color: white;
@@ -75,12 +74,12 @@ list-style: none;
       font-weight: bold;
   }
 
-@media only screen and (min-width: 500px)
+@media only screen and (min-width: 350px)
 
 {
 
     .button {
-        background-color: #008CBA; /* Green */
+        background-color: #ba1600; 
         border: none;
         color: white;
         margin-top: 1.2rem;
@@ -97,7 +96,7 @@ list-style: none;
         height: 8rem;
         margin-top: 10px;
         margin-left: 8rem;
-        /* border: 1px solid black; */
+        
         display: flex;
         margin-bottom: 30px;
     
@@ -130,4 +129,5 @@ list-style: none;
             width: 70%;
     }
         
-}
+} 
+

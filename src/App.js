@@ -3,7 +3,7 @@ import Mainscreen from "./components/MainScreen";
 function App() {
   return (
     <div className="App">
-      <Mainscreen/>
+      <Mainscreen />
     </div>
   );
 }

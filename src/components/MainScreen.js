@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import useGet from '../hooks/useGet';
 import '../components/style.css'
+import Display from './Display';
 
 function Mainscreen() {
 
 
-    const [optionValue, setOptionValue] = useState("");
+    const [optionValue, setOptionValue] = useState("ASTON MARTIN");
     const [modelData, setModalData] = useState([]);
 
 
@@ -14,18 +15,14 @@ function Mainscreen() {
     const getAllData = async () => {
         const url = `https://vpic.nhtsa.dot.gov/api/vehicles/getmodelsformake/${optionValue}?format=json`
         const response = await fetch(url);
-        console.log(response);
+        console.log(process.env.REACT_APP_API)
         const resJson = await response.json();
-        console.log("JSON", resJson.Results);
-        console.log("Response in JSON:" + JSON.stringify(resJson));
         setModalData(resJson.Results);
     }
 
     // Set Dropdown
     const handleChange = (e) => {
         e.preventDefault();
-
-        console.log(e.target.value);
         setOptionValue(e.target.value);
     }
 
@@ -34,8 +31,8 @@ function Mainscreen() {
             <div className="selectcont">
                 <div className="form_layout">
                     <form >
-                        <label className="fonts">Select Car Makes: </label>
-                        <select onChange={handleChange}>
+                        <label className="label">Select Car Makes: </label>
+                        <select className="selectbox" onChange={handleChange}>
 
                             {data.map((name) => {
                                 return (
@@ -46,30 +43,15 @@ function Mainscreen() {
                     </form>
 
                     <button className="button" onClick={getAllData}>Get Models</button>
-                    
+
                 </div>
-                
+
             </div>
             <div>
-                {/* {modelData.map((makeName) => {
-                    return (
-                        <div className="model">
-                            <p>{makeName.Make_Name}</p>
-                        </div>
-                    )
-                })} */}
+
                 {modelData.map((makeName) => {
                     return (
-                        <div>
-
-                            <ul>
-                                <li className="w3-panel w3-card">
-                                    <h6 > <b>ID:</b> {makeName.Make_ID}</h6>
-                                    <h6> <b>Make Name:</b> {makeName.Make_Name}</h6>
-                                    <h6> <b>Model Name:</b> {makeName.Model_Name}</h6>
-                                </li>
-                            </ul>
-                        </div>
+                       <Display modelData={modelData} />
                     );
                 })}
             </div>
